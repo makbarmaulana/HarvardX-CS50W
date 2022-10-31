@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/css/style.css">
     <title>Google Search Clone</title>
 </head>
 
@@ -14,24 +15,16 @@
             <div class="author">
                 <p>Cloned by <a href="https://github.com/makbarmaulana/">M Akbar Maulana</a></p>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item gmail">
-                    <a href="">Gmail</a>
-                </li>
-                <li class="nav-item images">
-                    <a href="">Images</a>
-                </li>
-                <li class="nav-item menu">
-                    <a href="#">
-                        <img src="./assets/menu.svg" alt="" width="24">
-                    </a>
-                </li>
-                <li class="nav-item profile">
-                    <a href="#">
-                        <img src="./assets/avatar.png" alt="avatar-img" width="32">
-                    </a>
-                </li>
-            </ul>
+            <div class="nav-menu">
+                <a href="#" class="nav-item gmail">Gmail</a>
+                <a href="#" class="nav-item images">Images</a>
+                <a href="#" class="nav-item menu">
+                    <img class="icon" src="./assets/menu.svg" alt="menu-icon" width="24">
+                </a>
+                <a href="#" class="nav-item profile">
+                    <img class="icon" src="./assets/avatar.png" alt="avatar-img" width="28" height="28">
+                </a>
+            </div>
         </nav>
     </header>
 
@@ -39,18 +32,18 @@
     <main id="main">
         <section class="main-container">
             <figure class="logo">
-                <img src="./assets/google-logo.png" >
+                <img src="./assets/google-logo.png" width="272">
             </figure>
             <form action="https://google.com/search" class="search-form">
                 <div class="search-input">
-                    <img src="./assets/search.svg" alt="search-icon" width="20">
+                    <img class="icon" src="./assets/search.svg" alt="search-icon" width="24">
                     <input type="text" name="q">
-                    <img src="./assets/mic.svg" alt="mic-icon" width="20">
-                    <img src="./assets/camera.svg" alt="camera-icon" width="20">
+                    <img class="icon" src="./assets/mic.svg" alt="mic-icon" width="24">
+                    <img class="icon" src="./assets/camera.svg" alt="camera-icon" width="24">
                 </div>
                 <div class="buttons">
-                    <input type="submit" value="Google Search">
-                    <input type="submit" value="I'm Feeling Lucky">
+                    <input type="submit" value="Google Search" class="button">
+                    <input type="submit" value="I'm Feeling Lucky" class="button">
                 </div>
             </form>
             <div class="lang">
@@ -67,17 +60,17 @@
             <p>Indonesia</p>
         </div>
         <div class="footer-menu">
-            <ul class="left">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Advertising</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">How Search works</a></li>
-            </ul>
-            <ul class="right">
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Term</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
+            <div class="left">
+                <a href="#">About</a>
+                <a href="#">Advertising</a>
+                <a href="#">Business</a>
+                <a href="#">How Search works</a>
+            </div>
+            <div class="right">
+                <a href="#">Privacy</a>
+                <a href="#">Term</a>
+                <a href="#">Settings</a>
+            </div>
         </div>
     </footer>
 </body>
