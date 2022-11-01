@@ -44,9 +44,9 @@ input {
 
 a {
 	text-decoration: none;
-	color: $white-100;
 	font-size: 14px;
 	font-weight: 400;
+	color: #4487f6;
 	&:hover {
 		text-decoration: underline;
 	}
@@ -86,14 +86,12 @@ img {
 	@include flex-align-center();
 	height: 60px;
 	padding: 0 24px;
-	.author p {
-		a {
-			color: #8ab4f8;
-		}
-	}
 	.nav-menu {
 		@include flex-align-center();
 		margin-left: auto;
+		.nav-item {
+			color: $white-90;
+		}
 		.menu,
 		.profile {
 			@include flex-center();
@@ -115,6 +113,14 @@ img {
 .main-container {
 	@include flex-center();
 	flex-direction: column;
+	.logo {
+		position: relative;
+		a {
+			position: absolute;
+			bottom: 5px;
+			right: 11px;
+		}
+	}
 	.search-form {
 		@include flex-center();
 		flex-direction: column;
@@ -173,12 +179,7 @@ img {
 			font-size: 13px;
 		}
 		a {
-			// margin-left: 4px;
 			font-size: 13px;
-			color: #8ab4f8;
-			&:visited {
-				color: #c58af9;
-			}
 		}
 	}
 }

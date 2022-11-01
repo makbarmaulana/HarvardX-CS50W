@@ -36,9 +36,9 @@ input:focus-visible {
 
 a {
   text-decoration: none;
-  color: #fff;
   font-size: 14px;
   font-weight: 400;
+  color: #4487f6;
 }
 a:hover {
   text-decoration: underline;
@@ -72,14 +72,14 @@ img {
   height: 60px;
   padding: 0 24px;
 }
-.navbar .author p a {
-  color: #8ab4f8;
-}
 .navbar .nav-menu {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-left: auto;
+}
+.navbar .nav-menu .nav-item {
+  color: rgba(243, 239, 239, 0.9);
 }
 .navbar .nav-menu .menu,
 .navbar .nav-menu .profile {
@@ -104,6 +104,14 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.main-container .logo {
+  position: relative;
+}
+.main-container .logo a {
+  position: absolute;
+  bottom: 5px;
+  right: 11px;
 }
 .main-container .search-form {
   display: flex;
@@ -171,10 +179,6 @@ img {
 }
 .main-container .lang a {
   font-size: 13px;
-  color: #8ab4f8;
-}
-.main-container .lang a:visited {
-  color: #c58af9;
 }
 
 /*--- FOOTER ---*/
