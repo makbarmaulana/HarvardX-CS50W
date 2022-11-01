@@ -16,7 +16,7 @@ $grey-2: #9aa0a6;
 }
 
 html {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
 body {
@@ -46,6 +46,7 @@ a {
 	text-decoration: none;
 	color: $white-100;
 	font-size: 14px;
+	font-weight: 400;
 	&:hover {
 		text-decoration: underline;
 	}
@@ -64,6 +65,7 @@ img {
 .button,
 .icon {
 	cursor: pointer;
+	user-select: none;
 }
 
 @mixin flex-center {
@@ -84,12 +86,14 @@ img {
 	@include flex-align-center();
 	height: 60px;
 	padding: 0 24px;
+	.author p {
+		a {
+			color: #8ab4f8;
+		}
+	}
 	.nav-menu {
 		@include flex-align-center();
 		margin-left: auto;
-		.nav-item {
-			font-size: 14px;
-		}
 		.menu,
 		.profile {
 			@include flex-center();
@@ -111,11 +115,10 @@ img {
 .main-container {
 	@include flex-center();
 	flex-direction: column;
-
 	.search-form {
 		@include flex-center();
 		flex-direction: column;
-		margin-top: 24px;
+		margin-top: 20px;
 		.search-input {
 			@include flex-center();
 			border: 1px solid grey;
@@ -124,12 +127,12 @@ img {
 			max-width: 582px;
 			height: 46px;
 			padding: 0 14px;
-			gap: 8px;
+			gap: 16px;
 			input {
 				display: flex;
 				flex: 1;
 				background-color: transparent;
-				height: 75%;
+				height: 100%;
 				font-size: 16px;
 				&:focus-visible {
 					border-right: 1px solid $grey;
@@ -144,14 +147,17 @@ img {
 		}
 		.buttons {
 			@include flex-center();
-			gap: 14px;
+			gap: 12px;
 			margin-top: 32px;
 			.button {
 				border: 1px solid #303134;
 				border-radius: 4px;
 				background-color: #303134;
 				color: $white-90;
-				padding: 10px 18px;
+				padding: 0 16px;
+				min-width: 54px;
+				height: 36px;
+				font-size: 14px;
 				font-weight: 400;
 				&:hover {
 					border: 1px solid $grey;
@@ -162,10 +168,14 @@ img {
 
 	.lang {
 		@include flex-align-center();
-		margin-top: 32px;
-		a {
-			color: #8ab4f8;
+		margin-top: 28px;
+		p {
 			font-size: 13px;
+		}
+		a {
+			// margin-left: 4px;
+			font-size: 13px;
+			color: #8ab4f8;
 			&:visited {
 				color: #c58af9;
 			}
@@ -180,6 +190,7 @@ img {
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	background-color: #171717;
 	.location {
 		@include flex-align-center();
 		height: 48px;
@@ -193,15 +204,15 @@ img {
 		@include flex-align-center();
 		height: 48px;
 		padding: 0 32px;
-
 		.left {
 			@include flex-align-center();
+			gap: 28px;
 		}
 		.right {
 			@include flex-align-center();
 			margin-left: auto;
+			gap: 28px;
 		}
-
 		a {
 			color: $grey-2;
 		}
