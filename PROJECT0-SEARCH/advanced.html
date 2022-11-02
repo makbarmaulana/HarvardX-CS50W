@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Clone</title>
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar">
+            <div class="author">
+                <p>Cloned by <a href="https://github.com/makbarmaulana/">M Akbar Maulana</a></p>
+            </div>
+            <div class="nav-menu">
+                <a href="https://mail.google.com/mail/&ogbl" class="nav-item gmail">Gmail</a>
+                <a href="index.html" class="nav-item home">Home</a>
+                <a href="images.html" class="nav-item images">Images</a>
+                <a href="#" class="nav-item menu">
+                    <img class="icon" src="assets/menu.svg" alt="menu-icon" width="24">
+                </a>
+                <a href="#" class="nav-item profile">
+                    <img class="icon" src="assets/avatar.png" alt="avatar-img" width="28" height="28">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="main">
+        <div class="main-container">
+            <div class="main-title-box">
+                <h2 class="main-title">Advanced Search</h2>
+            </div>
+
+            <form class="row" action="https://www.google.com/search" method="get">
+                <div class="column">
+                    <div class="title-box">
+                        <h3 class="title">Find pages with...</h3>
+                        <p class="sub-title">To do this in the search box.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>All these words:</label>
+                        <input type="text" name="as_q">
+                        <p>Type the important words: <strong>tri-colour rat terrier</strong></p>
+                    </div>
+                    <div class="form-group">
+                        <label>This exact word or phrase:</label>
+                        <input type="text" name="as_epq">
+                        <p>Put exact words in quotes: <strong>"rat terrier"</strong></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Any of these words: </label>
+                        <input type="text" name="as_oq">
+                        <p>Type <strong>OR</strong> between all the words you want: <strong>miniature OR
+                                standard</strong>
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <label>None of these words:</label>
+                        <input type="text" name="as_eq">
+                        <p>Put a minus sign just before words that you don't want: <strong>-rodent, -"Jack
+                                Russell"</strong>
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>numbers ranging from:</label>
+                        <div class="col-2">
+                            <input name="as_nlo" type="text">
+                            <p>to</p>
+                            <input name="as_nhi" type="text">
+                        </div>
+                        <p>Put two full stops between the numbers and add a unit of measurement: <strong>10..35,
+                                £300..£500,
+                                2010..2011</strong></p>
+                    </div>
+
+                    <button type="submit">SUBMIT</button>
+
+                </div>
+            </form>
+
+        </div>
+
+
+    </main>
+
+
+    <footer id="footer">
+        <div class="location">
+            <p>Indonesia</p>
+        </div>
+        <div class="footer-menu">
+            <div class="left">
+                <a
+                    href="https://about.google/?utm_source=google-ID&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+                <a
+                    href="https://www.google.com/intl/id_id/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpafooter&amp;fg=1">Advertising</a>
+                <a
+                    href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpbfooter&amp;fg=1">Business</a>
+                <a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a>
+            </div>
+            <div class="right">
+                <a href="https://policies.google.com/privacy?hl=id&amp;fg=1">Privacy</a>
+                <a href="https://policies.google.com/terms?hl=id&amp;fg=1">Terms</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
