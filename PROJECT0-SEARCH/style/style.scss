@@ -42,9 +42,11 @@ select {
 	background-color: transparent;
 	height: 30px;
 	padding: 4px 8px;
+
 	&:focus-visible {
 		outline: unset;
 	}
+
 	option {
 		background-color: $bg-color;
 	}
@@ -54,7 +56,8 @@ a {
 	text-decoration: none;
 	font-size: 14px;
 	font-weight: 400;
-	color: #4487f6;
+	color: #8ab4f8;
+
 	&:hover {
 		text-decoration: underline;
 	}
@@ -79,7 +82,8 @@ img {
 	object-fit: contain;
 }
 
-.button,
+button,
+select,
 .icon {
 	cursor: pointer;
 	user-select: none;
@@ -97,28 +101,34 @@ img {
 	gap: 16px;
 }
 
+
 /*--- HEADER ---*/
 
 .navbar {
 	@include flex-align-center();
 	height: 60px;
 	padding: 0 24px;
+
 	.nav-menu {
 		@include flex-align-center();
 		margin-left: auto;
+
 		.nav-item {
 			color: $white-90;
 		}
+
 		.menu,
 		.profile {
 			@include flex-center();
 			width: 32px;
 			height: 32px;
 			border-radius: 50%;
+
 			&:hover {
 				background-color: rgba(232, 234, 237, 0.08);
 			}
 		}
+
 		.profile {
 			background-color: $grey;
 		}
@@ -131,18 +141,22 @@ img {
 	padding-bottom: $footer-height;
 	@include flex-center();
 	flex-direction: column;
+
 	.logo {
 		position: relative;
+
 		a {
 			position: absolute;
 			bottom: 5px;
 			right: 11px;
 		}
 	}
+
 	.search-form {
 		@include flex-center();
 		flex-direction: column;
 		margin-top: 20px;
+
 		.search-input {
 			@include flex-center();
 			border: 1px solid grey;
@@ -152,6 +166,7 @@ img {
 			height: 46px;
 			padding: 0 14px;
 			gap: 16px;
+
 			input {
 				display: flex;
 				flex: 1;
@@ -159,21 +174,25 @@ img {
 				border: transparent;
 				height: 100%;
 				font-size: 16px;
+
 				&:focus-visible {
 					border-right: 1px solid $grey;
 					background-color: #303134;
 				}
 			}
+
 			&:focus-within,
 			&:hover {
 				border: 1px solid transparent;
 				background-color: #303134;
 			}
 		}
+
 		.buttons {
 			@include flex-center();
 			gap: 12px;
 			margin-top: 32px;
+
 			.button {
 				border: 1px solid #303134;
 				border-radius: 4px;
@@ -184,6 +203,7 @@ img {
 				height: 36px;
 				font-size: 14px;
 				font-weight: 400;
+
 				&:hover {
 					border: 1px solid $grey;
 				}
@@ -194,9 +214,11 @@ img {
 	.lang {
 		@include flex-align-center();
 		margin-top: 28px;
+
 		p {
 			font-size: 13px;
 		}
+
 		a {
 			font-size: 13px;
 		}
@@ -212,29 +234,35 @@ img {
 	width: 100%;
 	max-height: $footer-height;
 	background-color: #171717;
+
 	.location {
 		@include flex-align-center();
 		height: 48px;
 		border-bottom: 1px solid #3c4043;
 		padding: 0 32px;
+
 		p {
 			color: $grey-2;
 		}
 	}
+
 	.footer-menu {
 		@include flex-align-center();
 		height: 48px;
 		padding: 0 32px;
+
 		.left {
 			@include flex-align-center();
 			gap: 28px;
 		}
+
 		.right {
 			@include flex-align-center();
 			@include flex-align-center();
 			margin-left: auto;
 			gap: 28px;
 		}
+
 		a {
 			color: $grey-2;
 		}
@@ -243,49 +271,108 @@ img {
 
 /*--- ADVANCED ---*/
 
-#main {
-	.main-title-box {
+.main-advanced-container {
+	padding-bottom: $footer-height;
+
+	.main-title-wrapper {
 		border-bottom: 1px solid #3c4043;
-		margin-top: 42px;
-		.main-title {
+
+		.main-title-page {
+			font-size: 20px;
+			font-weight: 400;
 			color: #f28b82;
-			margin-bottom: 30px;
+			margin: 25px 45px 22px;
 		}
 	}
 
 	.row {
 		display: grid;
 		gap: 16px;
-		padding: 60px;
-		.title-box {
+		margin: 29px 2% 0 45px;
+
+		.title-form-wrapper {
 			display: grid;
 			grid-template-columns: 1.4fr 1fr;
 			align-items: center;
 			margin: 14px 0;
-			.title {
+
+			.title-form {
 				font-size: 16px;
+				font-weight: 500;
 			}
-			.sub-title {
+
+			.sub-title-form {
 				font-weight: 600;
 			}
 		}
 
 		.column {
 			border-bottom: 1px solid #3c4043;
+
+			:nth-child(1) {
+				margin-bottom: 14px;
+			}
+
 			.form-group {
 				display: grid;
 				align-items: center;
-				grid-template-columns: 200px 1fr 1fr;
+				grid-template-columns: 170px 1fr 1fr;
 				gap: 16px;
 				margin-bottom: 16px;
+
+				label,
+				p {
+					color: #bdc1c6;
+				}
+
+				strong {
+					font-family: monospace;
+					color: $white-90;
+					font-weight: 400;
+				}
+
+				input,
+				select {
+					border: 1px solid $grey;
+				}
+
 				.col-2 {
 					@include flex-align-center();
-					width: 100%;
+					gap: 14px;
 					input {
-						flex: 1;
+						margin: unset;
+						flex-grow: 1;
 					}
 				}
+
+				.btn-submit {
+					font-size: 11px;
+					font-weight: bold;
+					background-color: #8ab4f8;
+					border: #8ab4f8;
+					border-radius: 2px;
+					grid-column-start: 2;
+					min-width: 54px;
+					padding: 8px 12px;
+					margin-left: auto;
+					margin-top: 14px;
+				}
 			}
+		}
+	}
+
+	.external-links {
+		margin: 24px 0 32px 45px;
+
+		p {
+			font-size: 16px;
+			color: $white-90;
+		}
+
+		.links {
+			margin-top: 14px;
+			display: flex;
+			flex-direction: column;
 		}
 	}
 }

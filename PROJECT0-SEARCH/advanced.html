@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Advanced Clone</title>
     <link rel="stylesheet" href="style/css/style.css">
+    <title>Google Advanced Clone</title>
 </head>
 
 <body>
@@ -31,37 +31,37 @@
 
 
     <main id="main">
-        <div class="main-container">
-            <div class="main-title-box">
-                <h2 class="main-title">Advanced Search</h2>
+        <div class="main-advanced-container">
+            <div class="main-title-wrapper">
+                <h2 class="main-title-page">Advanced Search</h2>
             </div>
 
             <form class="row" action="https://www.google.com/search" method="get">
                 <div class="column">
-                    <div class="title-box">
-                        <h3 class="title">Find pages with...</h3>
-                        <p class="sub-title">To do this in the search box.</p>
+                    <div class="title-form-wrapper">
+                        <h3 class="title-form">Find pages with...</h3>
+                        <p class="sub-title-form">To do this in the search box.</p>
                     </div>
 
                     <div class="form-group">
-                        <label>All these words:</label>
+                        <label>all these words:</label>
                         <input type="text" name="as_q">
                         <p>Type the important words: <strong>tri-colour rat terrier</strong></p>
                     </div>
                     <div class="form-group">
-                        <label>This exact word or phrase:</label>
+                        <label>this exact word or phrase:</label>
                         <input type="text" name="as_epq">
                         <p>Put exact words in quotes: <strong>"rat terrier"</strong></p>
                     </div>
                     <div class="form-group">
-                        <label>Any of these words: </label>
+                        <label>any of these words: </label>
                         <input type="text" name="as_oq">
                         <p>Type <strong>OR</strong> between all the words you want: <strong>miniature OR
                                 standard</strong>
                         </p>
                     </div>
                     <div class="form-group">
-                        <label>None of these words:</label>
+                        <label>none of these words:</label>
                         <input type="text" name="as_eq">
                         <p>Put a minus sign just before words that you don't want: <strong>-rodent, -"Jack
                                 Russell"</strong>
@@ -79,11 +79,122 @@
                                 £300..£500,
                                 2010..2011</strong></p>
                     </div>
-
-                    <button type="submit">SUBMIT</button>
-
                 </div>
+
+                <div class="column">
+                    <div class="title-form-wrapper">
+                        <h3 class="title-form">Then narrow your result by...</h3>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lr-input">language:</label>
+                        <select id="lr_input">
+                            <option>any languange</option>
+                            <option>Africaans</option>
+                            <option>Arabic</option>
+                            <option>Armenian</option>
+                            <option>Belarusian</option>
+                            <option>Bulgarian</option>
+                        </select>
+                        <p>Find pages in the language that you select.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cr-input">region:</label>
+                        <select id="cr-input">
+                            <option>any region</option>
+                            <option>Afganistan</option>
+                            <option>Albania</option>
+                            <option>Algeria</option>
+                            <option>American Samoa</option>
+                            <option>Andorra</option>
+                        </select>
+                        <p>Find pages published in particular region.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="as_qdr_input">last update:</label>
+                        <select id="as_qdr_input">
+                            <option>any time</option>
+                            <option>past 24 hours</option>
+                            <option>past week</option>
+                            <option>past month</option>
+                            <option>past year</option>
+                        </select>
+                        <p>Find pages updated within the time that you specify.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="query-site">site or domain:</label>
+                        <input class="advanced-input" id="query-site" type="text">
+                        <p>Search on site (like: <strong>wikipedia.org</strong>) or limit ypur result to a domain like
+                            <strong>.edu</strong>, <strong>.org</strong> or <strong>.gov</strong>
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="as_occt_input">terms appearing:</label>
+                        <select id="as_occt_input">
+                            <option>any where in the page</option>
+                            <option>in the title of the page</option>
+                            <option>in the text of the page</option>
+                            <option>in the URL of the page</option>
+                            <option>in links to the page</option>
+                        </select>
+                        <p>Search for terms in the whole page, page title or web address, or link to the page you're
+                            looking for.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="as_filetype_input">file type:</label>
+                        <select id="as_filetype_input">
+                            <option>any format</option>
+                            <option>Adobe Acrobat PDF (.pdf)</option>
+                            <option>Adobe Postscript (.post)</option>
+                            <option>Autodesk DWF (.dwf)</option>
+                            <option>Google Earth KML (.kml)</option>
+                            <option>Google Earth KMZ (.kmz)</option>
+                        </select>
+                        <p>Find pages in the format that you prefer</p>
+                    </div>
+
+                    <div class="form-group">
+                        <a href="https://support.google.com/websearch?p=ws_images_usagerights&amp;hl=en">usage
+                            rights</a>
+                        <select id="as_rights_input">
+                            <option>free to use or share</option>
+                            <option>not filtered by licence</option>
+                            <option>free to use, or share even commercially</option>
+                            <option>free to use share or modify</option>
+                            <option>free to use, share or modify, even commercially</option>
+                        </select>
+                        <p>Find pages that you're free to use your self.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn-submit">Advanced Search</button>
+                    </div>
+                </div>
+
             </form>
+
+            <div class="external-links">
+                <p>You can also...</p>
+                <div class="links">
+                    <a href="https://support.google.com/websearch?p=adv_pages_similar&amp;hl=en">
+                        Find pages that are similar to a URL
+                    </a>
+                    <a href="https://support.google.com/websearch?p=adv_pages_visited&amp;hl=en">
+                        Search pages that you've visited
+                    </a>
+                    <a href="https://support.google.com/websearch?p=adv_operators&amp;hl=en">
+                        Use operators in the search box
+                    </a>
+                    <a href="https://www.google.com/preferences?hl=en">
+                        Customise your search settings
+                    </a>
+                </div>
+            </div>
 
         </div>
 
@@ -97,18 +208,9 @@
         </div>
         <div class="footer-menu">
             <div class="left">
-                <a
-                    href="https://about.google/?utm_source=google-ID&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
-                <a
-                    href="https://www.google.com/intl/id_id/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpafooter&amp;fg=1">Advertising</a>
-                <a
-                    href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&amp;utm_source=google.com&amp;utm_medium=referral&amp;utm_campaign=google_hpbfooter&amp;fg=1">Business</a>
-                <a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a>
-            </div>
-            <div class="right">
+                <a href="https://support.google.com/websearch/?p=ws_results_help&amp;hl=en-ID&amp;fg=1">Help</a>
                 <a href="https://policies.google.com/privacy?hl=id&amp;fg=1">Privacy</a>
                 <a href="https://policies.google.com/terms?hl=id&amp;fg=1">Terms</a>
-                <a href="#">Settings</a>
             </div>
         </div>
     </footer>
