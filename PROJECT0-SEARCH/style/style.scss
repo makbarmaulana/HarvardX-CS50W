@@ -1,10 +1,18 @@
+$footer-height: 96px;
 $bg-color: #202124;
+$fc-grey: #9aa0a6;
+$fc-light-grey: #bdc1c6;
+$bg-footer: hwb(0 9% 91%);
 $white-100: #fff;
 $white-90: rgba(243, 239, 239, 0.9);
-$light-grey: rgb(190, 194, 199);
-$grey: rgb(95, 99, 104);
-$grey-2: #9aa0a6;
-$footer-height: 96px;
+$border-color: #5f6368;
+$border-color-2: #3c4043;
+$grey-1: #303134;
+$grey-2: #e8eaed14;
+$grey-3: #202124;
+$blue-1: #4a86e6;
+$blue-2: #8ab4f8;
+$transition-1: 100ms ease;
 
 /*--- RESET STYLING ---*/
 
@@ -36,12 +44,13 @@ ul {
 
 input,
 select {
-	border: 1px solid $grey-2;
+	border: 1px solid $border-color;
 	border-radius: unset;
 	color: $white-90;
 	background-color: transparent;
 	height: 30px;
 	padding: 4px 8px;
+	transition: $transition-1;
 
 	&:focus-visible {
 		outline: unset;
@@ -57,6 +66,7 @@ a {
 	font-size: 14px;
 	font-weight: 400;
 	color: #8ab4f8;
+	transition: $transition-1;
 
 	&:hover {
 		text-decoration: underline;
@@ -87,6 +97,7 @@ select,
 .icon {
 	cursor: pointer;
 	user-select: none;
+	transition: $transition-1;
 }
 
 @mixin flex-center {
@@ -115,6 +126,8 @@ select,
 
 		.nav-item {
 			color: $white-90;
+			font-size: 13px;
+			font-weight: 500;
 		}
 
 		.menu,
@@ -123,14 +136,15 @@ select,
 			width: 32px;
 			height: 32px;
 			border-radius: 50%;
+			transition: $transition-1;
 
 			&:hover {
-				background-color: rgba(232, 234, 237, 0.08);
+				background-color: $grey-2;
 			}
 		}
 
 		.profile {
-			background-color: $grey;
+			background-color: $white-90;
 		}
 	}
 }
@@ -139,6 +153,7 @@ select,
 
 .main-container {
 	padding-bottom: $footer-height;
+	margin-top: 12px;
 	@include flex-center();
 	flex-direction: column;
 
@@ -148,7 +163,11 @@ select,
 		a {
 			position: absolute;
 			bottom: 5px;
-			right: 11px;
+			right: 5px;
+			font-size: 16px;
+			color: $blue-1;
+			text-decoration: none;
+			cursor: text;
 		}
 	}
 
@@ -159,7 +178,7 @@ select,
 
 		.search-input {
 			@include flex-center();
-			border: 1px solid grey;
+			border: 1px solid $border-color;
 			border-radius: 24px;
 			width: 582px;
 			max-width: 582px;
@@ -174,18 +193,20 @@ select,
 				border: transparent;
 				height: 100%;
 				font-size: 16px;
+			}
 
-				&:focus-visible {
-					border-right: 1px solid $grey;
-					background-color: #303134;
-				}
+			.search-btn {
+				@include flex-align-center();
+				background-color: unset;
+				border: unset;
 			}
 
 			&:focus-within,
 			&:hover {
 				border: 1px solid transparent;
-				background-color: #303134;
+				background-color: $grey-2;
 			}
+
 		}
 
 		.buttons {
@@ -194,18 +215,19 @@ select,
 			margin-top: 32px;
 
 			.button {
-				border: 1px solid #303134;
+				border: 1px solid transparent;
 				border-radius: 4px;
-				background-color: #303134;
+				background-color: $grey-1;
 				color: $white-90;
 				padding: 0 16px;
 				min-width: 54px;
 				height: 36px;
 				font-size: 14px;
 				font-weight: 400;
+				cursor: pointer;
 
 				&:hover {
-					border: 1px solid $grey;
+					border: 1px solid $border-color;
 				}
 			}
 		}
@@ -233,16 +255,16 @@ select,
 	bottom: 0;
 	width: 100%;
 	max-height: $footer-height;
-	background-color: #171717;
+	background-color: $bg-footer;
 
 	.location {
 		@include flex-align-center();
 		height: 48px;
-		border-bottom: 1px solid #3c4043;
+		border-bottom: 1px solid $border-color-2;
 		padding: 0 32px;
 
 		p {
-			color: $grey-2;
+			color: $fc-grey;
 		}
 	}
 
@@ -264,7 +286,7 @@ select,
 		}
 
 		a {
-			color: $grey-2;
+			color: $fc-grey;
 		}
 	}
 }
@@ -275,7 +297,7 @@ select,
 	padding-bottom: $footer-height;
 
 	.main-title-wrapper {
-		border-bottom: 1px solid #3c4043;
+		border-bottom: 1px solid $border-color;
 
 		.main-title-page {
 			font-size: 20px;
@@ -307,7 +329,7 @@ select,
 		}
 
 		.column {
-			border-bottom: 1px solid #3c4043;
+			border-bottom: 1px solid $border-color-2;
 
 			:nth-child(1) {
 				margin-bottom: 14px;
@@ -322,7 +344,7 @@ select,
 
 				label,
 				p {
-					color: #bdc1c6;
+					color: $fc-light-grey;
 				}
 
 				strong {
@@ -333,7 +355,7 @@ select,
 
 				input,
 				select {
-					border: 1px solid $grey;
+					border: 1px solid $border-color-2;
 				}
 
 				.col-2 {
@@ -348,14 +370,18 @@ select,
 				.btn-submit {
 					font-size: 11px;
 					font-weight: bold;
-					background-color: #8ab4f8;
-					border: #8ab4f8;
+					color: $white-90;
+					background-color: $blue-1;
+					border: $blue-1;
 					border-radius: 2px;
 					grid-column-start: 2;
 					min-width: 54px;
 					padding: 8px 12px;
 					margin-left: auto;
 					margin-top: 14px;
+					&:hover {
+						background-color: $blue-2;
+					}
 				}
 			}
 		}
@@ -363,7 +389,7 @@ select,
 
 	.external-links {
 		margin: 24px 0 32px 45px;
-
+		width: max-content;
 		p {
 			font-size: 16px;
 			color: $white-90;

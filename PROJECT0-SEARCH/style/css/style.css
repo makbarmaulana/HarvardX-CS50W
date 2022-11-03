@@ -27,12 +27,13 @@ ul {
 
 input,
 select {
-  border: 1px solid #9aa0a6;
+  border: 1px solid #5f6368;
   border-radius: unset;
   color: rgba(243, 239, 239, 0.9);
   background-color: transparent;
   height: 30px;
   padding: 4px 8px;
+  transition: 100ms ease;
 }
 input:focus-visible,
 select:focus-visible {
@@ -48,6 +49,7 @@ a {
   font-size: 14px;
   font-weight: 400;
   color: #8ab4f8;
+  transition: 100ms ease;
 }
 a:hover {
   text-decoration: underline;
@@ -81,6 +83,7 @@ select,
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  transition: 100ms ease;
 }
 
 /*--- HEADER ---*/
@@ -99,6 +102,8 @@ select,
 }
 .navbar .nav-menu .nav-item {
   color: rgba(243, 239, 239, 0.9);
+  font-size: 13px;
+  font-weight: 500;
 }
 .navbar .nav-menu .menu,
 .navbar .nav-menu .profile {
@@ -108,18 +113,20 @@ select,
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  transition: 100ms ease;
 }
 .navbar .nav-menu .menu:hover,
 .navbar .nav-menu .profile:hover {
-  background-color: rgba(232, 234, 237, 0.08);
+  background-color: rgba(232, 234, 237, 0.0784313725);
 }
 .navbar .nav-menu .profile {
-  background-color: rgb(95, 99, 104);
+  background-color: rgba(243, 239, 239, 0.9);
 }
 
 /*--- MAIN ---*/
 .main-container {
   padding-bottom: 96px;
+  margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +138,11 @@ select,
 .main-container .logo a {
   position: absolute;
   bottom: 5px;
-  right: 11px;
+  right: 5px;
+  font-size: 16px;
+  color: #4a86e6;
+  text-decoration: none;
+  cursor: text;
 }
 .main-container .search-form {
   display: flex;
@@ -144,7 +155,7 @@ select,
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid grey;
+  border: 1px solid #5f6368;
   border-radius: 24px;
   width: 582px;
   max-width: 582px;
@@ -160,13 +171,16 @@ select,
   height: 100%;
   font-size: 16px;
 }
-.main-container .search-form .search-input input:focus-visible {
-  border-right: 1px solid rgb(95, 99, 104);
-  background-color: #303134;
+.main-container .search-form .search-input .search-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: unset;
+  border: unset;
 }
 .main-container .search-form .search-input:focus-within, .main-container .search-form .search-input:hover {
   border: 1px solid transparent;
-  background-color: #303134;
+  background-color: rgba(232, 234, 237, 0.0784313725);
 }
 .main-container .search-form .buttons {
   display: flex;
@@ -176,7 +190,7 @@ select,
   margin-top: 32px;
 }
 .main-container .search-form .buttons .button {
-  border: 1px solid #303134;
+  border: 1px solid transparent;
   border-radius: 4px;
   background-color: #303134;
   color: rgba(243, 239, 239, 0.9);
@@ -185,9 +199,10 @@ select,
   height: 36px;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
 }
 .main-container .search-form .buttons .button:hover {
-  border: 1px solid rgb(95, 99, 104);
+  border: 1px solid #5f6368;
 }
 .main-container .lang {
   display: flex;
@@ -209,7 +224,7 @@ select,
   bottom: 0;
   width: 100%;
   max-height: 96px;
-  background-color: #171717;
+  background-color: hwb(0 9% 91%);
 }
 #footer .location {
   display: flex;
@@ -254,7 +269,7 @@ select,
   padding-bottom: 96px;
 }
 .main-advanced-container .main-title-wrapper {
-  border-bottom: 1px solid #3c4043;
+  border-bottom: 1px solid #5f6368;
 }
 .main-advanced-container .main-title-wrapper .main-title-page {
   font-size: 20px;
@@ -304,7 +319,7 @@ select,
 }
 .main-advanced-container .row .column .form-group input,
 .main-advanced-container .row .column .form-group select {
-  border: 1px solid rgb(95, 99, 104);
+  border: 1px solid #3c4043;
 }
 .main-advanced-container .row .column .form-group .col-2 {
   display: flex;
@@ -319,8 +334,9 @@ select,
 .main-advanced-container .row .column .form-group .btn-submit {
   font-size: 11px;
   font-weight: bold;
-  background-color: #8ab4f8;
-  border: #8ab4f8;
+  color: rgba(243, 239, 239, 0.9);
+  background-color: #4a86e6;
+  border: #4a86e6;
   border-radius: 2px;
   grid-column-start: 2;
   min-width: 54px;
@@ -328,8 +344,14 @@ select,
   margin-left: auto;
   margin-top: 14px;
 }
+.main-advanced-container .row .column .form-group .btn-submit:hover {
+  background-color: #8ab4f8;
+}
 .main-advanced-container .external-links {
   margin: 24px 0 32px 45px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .main-advanced-container .external-links p {
   font-size: 16px;
