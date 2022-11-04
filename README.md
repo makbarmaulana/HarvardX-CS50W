@@ -1,6 +1,6 @@
 # Current Progress :
 
-#### Project 0 : Search --on progress
+#### Project 0 : Search
 #### Project 1 : Wiki --on progress
 #### Project 2 : Commerce --on progress
 #### Project 3 : Mail --on progress
